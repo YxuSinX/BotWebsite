@@ -3,6 +3,10 @@
         {
             "source": "/(.*)",
             "destination": "/api/app/verify.html"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/api/app/invite.html"
         }
     ]
 }
