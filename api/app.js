@@ -78,8 +78,8 @@ app.route('/invite').get((req, res) => {
 });
 
 app.route('/verify').get((req, res) => {
-    res.redirect('verify.html')
-})
+  res.redirect('verify.html')
+});
 
 const port = 3000;
 app.listen(port, () => {
