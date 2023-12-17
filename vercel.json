@@ -5,7 +5,7 @@
             "destination": "/api/app/verify.html"
         },
         {
-            "source": "/(.*)",
+            "source": "/invite",
             "destination": "/api/app/invite.html"
         }
     ]
