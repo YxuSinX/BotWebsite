@@ -5,4 +5,3 @@ function toggleMenu() {
         document.querySelector(".mobile_menu").style.display = "block";
     }
 }
-
