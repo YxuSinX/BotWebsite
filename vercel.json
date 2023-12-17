@@ -7,6 +7,10 @@
         {
             "source": "/invite",
             "destination": "/api/app/invite.html"
+        },
+        {
+            "source": "/discord",
+            "destination": "/api/app/discord.html"
         }
     ]
 }
