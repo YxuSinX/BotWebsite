@@ -1,7 +1,7 @@
 {
     "rewrites": [
         {
-            "source": "/(.*)",
+            "source": "/verify",
             "destination": "/api/app/verify.html"
         },
         {
