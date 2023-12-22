@@ -11,6 +11,10 @@
         {
             "source": "/discord",
             "destination": "/api/app/discord.html"
+        },
+        {
+            "source": "/tos",
+            "destination": "api/app/tos.html"
         }
     ]
 }
