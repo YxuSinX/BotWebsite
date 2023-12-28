@@ -183,6 +183,25 @@
 			Copyright © 2023 ikyxz - All rights reserved
 		</div>
 	</footer>
+<script>
+function toggleMenu() {
+    if (document.querySelector(".mobile_menu").style.display == "block") {
+        document.querySelector(".mobile_menu").style.display = "none";
+    } else {
+        document.querySelector(".mobile_menu").style.display = "block";
+    }
+}
+
+let docTitle = document.title;
+
+window.addEventListener("blur", () => {
+    document.title = "Invite Our Bot Now!";
+});
+
+window.addEventListener("focus", () => {
+    document.title = docTitle;
+});
+</script>
 	<script>
 		let docTitle = document.title;
 		window.addEventListener("blur", () => {
