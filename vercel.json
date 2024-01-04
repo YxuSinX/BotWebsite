@@ -14,7 +14,11 @@
         },
         {
             "source": "/tos",
-            "destination": "api/app/tos.html"
+            "destination": "/api/app/tos.html"
+        },
+        {
+            "source": "/nobanner",
+            "destination": "/api/app/nobanner.html"
         }
     ]
 }

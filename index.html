@@ -12,7 +12,7 @@
         <meta content="YxuSinBot is a really good Multifunction Bot" property="og:description">
         <meta content="https://yxubot.vercel.app" property="og:url">
         <meta content="images/botpfp.webp" property="og:image">
-        <meta content="#8C007A" data-react-helmet="true" name="theme-color">
+        <meta data-react-helmet="true" name="theme-color">
 
         <link rel="icon" type="image/x-icon" href="images/botpfp.webp">
         <link rel="stylesheet" href="css/style.css">
@@ -44,12 +44,7 @@
 
                         <div>
                                 <div class="primary_navigation">
-                                        <a href="https://scriptblox.com/">
-                                                <div>Scriptblox</div>
-                                        </a>
-                                        <a href="https://rscripts.net/">
-                                                <div>Rscripts</div>
-                                        </a>
+                                
                                         <a href="https://yxubot.vercel.app/discord" target="_blank">
                                                 <div>Join Our Discord</div>
                                         </a>
@@ -58,7 +53,7 @@
                                                 <div class="primary_button">Add to Server</div>
                                         </a>
                                 </div>
-                                <div class="primary_hamburger" onclick="toggleMenu()">
+                                <div class="primary" onclick="toggleMenu()">
                                         <svg viewBox="0 0 24 24">
                                                 <path fill="currentColor"
                                                         d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
@@ -145,16 +140,14 @@
                         </div>
                 </div>
 
-                <iframe src="https://discord.com/widget?id=1146954405602672640&theme=dark" width="390" height="500"
-                        allowtransparency="true" frameborder="0"
-                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                <div id="iframe-container">
+                        <iframe src="https://discord.com/widget?id=1146954405602672640&theme=dark" width="390"
+                                height="500" allowtransparency="true" frameborder="0"
+                                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                </div>
+
                 <!-- features end -->
 
-        </div>
-        <div class="row showcase_container">
-                <div class="text-xs-center showcase_logo showcase_logo-0 col-xs-6 col-md-3"><a
-                                href="https://scriptblox.com" target="_blank"><img src="images/20230131_114132.png"
-                                        alt="" class="showcase_image"></a></div>
         </div>
 
 
@@ -189,8 +182,8 @@
         <footer>
 
 
-                <div class="copyright">
-                        Copyright © 2023 ikyxz - All rights reserved
+                <div class="copyright" id="copyright">
+                        Copyright &copy; <span id="currentYear"></span> YxuSin & Palma Team's - All rights reserved
                 </div>
         </footer>
         <script>
@@ -211,8 +204,18 @@
                 window.addEventListener("focus", () => {
                         document.title = docTitle;
                 });
+                window.addEventListener('scroll', function () {
+                        var navbar = document.querySelector('nav');
+                        var scrolled = window.scrollY > 0;
+                        if (scrolled) {
+                                navbar.classList.add('scrolled');
+                        } else {
+                                navbar.classList.remove('scrolled');
+                        }
+                });
+                var currentYear = new Date().getFullYear();
+                document.getElementById('currentYear').innerText = currentYear;
         </script>
-
 
 </body>
 <!--FOOTER-->
